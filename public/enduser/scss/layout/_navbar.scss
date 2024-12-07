@@ -1,0 +1,89 @@
+nav {
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FFFFFF;
+        box-shadow: 5px 5px 5px 5px rgba(165, 184, 199, 0.815);
+        padding: 16px 96px 16px 96px;
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+
+        &__logo {
+            width: 138px;
+            height: 44px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+
+            @include responsive (max, 991px) {
+                display: none;
+            }
+
+            li {
+                list-style-type: none;
+
+                a {
+                    color: #000000;
+                    font-size: 28px;
+                    font-weight: 500;
+                    line-height: 33.6px;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+
+                    &.active {
+                        color: $color-primary;
+                        border-bottom: 1px solid $color-primary;
+                    }
+                }
+            }
+        }
+
+        .contactUSBtn {
+            padding: 16px 32px;
+            gap: 10px;
+            border-radius: 20px !important;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: center;
+            background-color: $color-primary;
+
+            @include responsive (max, 991px) {
+                display: none;
+            }
+        }
+
+        .toggler {
+            outline: none;
+            border: none;
+            background-color: transparent;
+
+            @include responsive (max, 991px) {
+                display: inline-block !important;
+            }
+        }
+    }
+
+}

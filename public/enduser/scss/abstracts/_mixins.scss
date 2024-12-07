@@ -1,0 +1,10 @@
+/* mixin for responsive it takes 
+    type : min or max 
+    size : 100px for the width of target screen
+*/
+
+@mixin responsive($type, $size) {
+  @media (#{$type}-width: $size) {
+    @content;
+  }
+}
